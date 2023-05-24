@@ -5,6 +5,7 @@
 :root {
     --primary-color: #ffb900;
     --secondary-color: #171100;
+    --font-heading: Sen, sans-serif;
 }
 
 html,
@@ -13,6 +14,7 @@ body {
 }
 
 html {
+    font-family: "poppins", sans-serif;
     font-size: 62.5%;
 }
 
@@ -26,7 +28,7 @@ a {
 }
 
 .content {
-    width: 1110px;
+    width: 1170px;
     max-width: calc(
         100% - 48px
     ); /* không bị lỗi giao diện khi width của trình duyệt bé hơn 1110 */
@@ -36,65 +38,69 @@ a {
 
 .btn {
     display: inline-block;
-    border-radius: 25px;
-    width: 118px;
-    height: 50px;
-    padding: 11px 41px;
-    font-family: "Poppins";
+    min-width: 118px;
+    padding: 0 16px;
+    line-height: 50px;
     font-weight: 600;
     font-size: 1.6rem;
-    line-height: 1.75;
     text-align: center;
     color: #ffffff;
+    background: var(--secondary-color);
+    border-radius: 999px;
+}
+.btn:hover {
+    opacity: 0.8;
 }
 
 /* ===============header================================ */
+main {
+    height: 3000px;
+}
+header {
+    background: #fffcf4;
+    z-index: 1;
+}
+
+.fixed {
+    position: sticky;
+    top: -28px;
+}
 
 .header {
-    background: #fffcf4;
-    height: 100vh;
-    padding-top: 47px;
-}
-
-.header nav {
-    display: flex;
-    justify-content: space-between;
-}
-
-.header nav .navigation {
-    display: flex;
-}
-
-.header nav .lish {
+    padding: 36px 0px 8px;
     display: flex;
     align-items: center;
 }
 
-.header nav .lish .item {
-    margin-left: 42px;
+.header .navigation {
+    margin-left: auto;
+}
+
+.header .navigation .lish {
+    display: flex;
 }
 
 .header .lish .item a {
-    font-family: "Poppins";
-    font-style: normal;
     font-weight: 400;
     font-size: 1.6rem;
-    line-height: 1.75;
-    text-align: center;
     color: #5f5b53;
+    padding: 8px 21px;
 }
 
-.header .lish .item:first-child a {
-    font-weight: 600;
+.header .lish .item:hover a {
+    /* font-weight: 600; */
+    text-shadow: 1px 0 0 currentColor;
     color: #171100;
-    display: block;
+    position: relative;
 }
 
-.header .lish .item:first-child a::after {
+.header .navigation:hover .item a::after {
+    position: absolute;
     content: "";
-    top: 0px;
-    right: 0px;
-    height: 10px;
+    display: block;
+    bottom: 6px;
+    left: 21px;
+    height: 2px;
     width: 12px;
     background: #171100;
     border-radius: 1px;
@@ -103,10 +109,169 @@ a {
 .header .btn {
     margin-left: 70px;
     width: 144px;
-    background-color: var(--secondary-color);
 }
 
-.header .logo img {
-    width: 85px;
-    height: 34px;
+/* ===================HERO================= */
+.hero {
+    padding-top: 56px;
+    background-color: #fffcf4;
+    height: calc(100vh - 94px);
+}
+
+.hero .body {
+    display: flex;
+}
+
+.hero .hero-img {
+    position: relative;
+    width: 48%;
+}
+
+.hero .hero-img .img {
+    /* xử lý ảnh vào */
+    width: 470px;
+    height: 685px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.hero-img .summary {
+    width: 270px;
+    /* height: 244px;   không canh chiều vào vì có thể != 3 item */
+    background-color: #ffffff;
+    box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+    position: absolute;
+    bottom: 48px; /* canh bottom để khi != 3 item thì cao lên*/
+    right: 0px;
+    padding: 24px;
+}
+
+.hero-img .summary .item {
+    margin-top: 14px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 14px;
+}
+
+.hero-img .summary .item + .item {
+    margin-bottom: 14px;
+}
+.summary .icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fcefff;
+}
+
+.summary .item:first-of-type .icon {
+    background: #fff9e8;
+}
+
+.summary .item:last-of-type .icon {
+    background: #ebeaff;
+}
+
+.summary .info {
+    margin-left: 16px;
+}
+
+.summary .info .label {
+    font-family: "Poppins";
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.86;
+    color: #5f5b53;
+}
+
+.summary .info .title {
+    font-family: "Poppins";
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 1.67;
+    color: #171100;
+}
+
+/* media-block  */
+
+.hero .media-block {
+    width: 52%;
+    padding-left: 130px;
+    padding-top: 65px;
+}
+
+.media-block .heading {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 5.8rem;
+    line-height: 1.17;
+    letter-spacing: -0.02em;
+    color: #171100;
+    width: 482px;
+}
+
+.media-block .desc {
+    margin-top: 22px;
+    font-size: 1.8rem;
+    line-height: 1.67;
+    color: #5f5b53;
+}
+
+.media-block .stats{
+    margin-left: -28px;  /* */
+    margin-top: 8px;
+}
+
+.media-block .stats strong{
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 4.4rem;
+    line-height: 1.23;
+    color: #171100;
+    padding-right: 8px;
+    margin-left: 28px;  /* */
+}
+
+.media-block .cta-group {
+    margin-top: 38px;
+    margin-bottom: 48px;
+    display: flex;
+    align-items: center;
+}
+
+.media-block .cta-group .btn-cta {
+    background-color: var(--primary-color);
+    width: 180px;
+    line-height: 64px;
+}
+
+.media-block .watch-video {
+    border: none;
+    background-color: transparent;
+    display: flex;
+    margin-left: 28px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.media-block .watch-video .icon {
+    width: 40px;
+    height: 40px;
+    background: #ffffff;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.07);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.media-block .watch-video span {
+    margin-left: 14px;
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 1.67;
+    color: #171100;
 }
