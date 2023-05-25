@@ -12,6 +12,7 @@
     </head>
     <body>
         <main>
+            <!-- =============================HEADER=================== -->
             <header class="fixed">
                 <div class="content">
                     <div class="header">
@@ -25,8 +26,10 @@
                             <!-- -----------NAVIGATION---------- -->
 
                             <ul class="lish">
-                                <li class="item"><a href="#!">Home</a></li>
-                                <li class="item"><a href="#!">Courses</a></li>
+                                <li class="item"><a href="#home">Home</a></li>
+                                <li class="item">
+                                    <a href="#course">Courses</a>
+                                </li>
                                 <li class="item"><a href="#!">Pricing</a></li>
                                 <li class="item"><a href="#!">Reviews</a></li>
                             </ul>
@@ -39,7 +42,7 @@
                 </div>
             </header>
             <!-- ==========================HERO=================== -->
-            <div class="hero">
+            <div class="hero" id="home">
                 <div class="content">
                     <div class="body">
                         <!-- ===============Image=================== -->
@@ -116,6 +119,112 @@
                             </p>
                         </div>
                     </div>
+                </div>
+            </div>
+            <div class="popular" id="course">
+                <div class="content">
+                    <div class="popular-top">
+                        <div class="info">
+                            <h2 class="title">Our popular courses</h2>
+                            <p class="desc">
+                                Build new skills with new trendy courses and
+                                shine for the next future career.
+                            </p>
+                        </div>
+                        <div class="controls">
+                            <button class="control-btn">
+                                <!-- =========Chevron icon========= -->
+                                <svg
+                                    width="8"
+                                    height="14"
+                                    viewBox="0 0 8 14"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M7 1L1 7L7 13"
+                                        stroke="currentColor"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    />
+                                </svg>
+                            </button>
+                            <button class="control-btn">
+                                <!-- =========Chevron icon========= -->
+                                <svg
+                                    width="8"
+                                    height="14"
+                                    viewBox="0 0 8 14"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M1 1L7 7L1 13"
+                                        stroke="currentColor"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <ul class="course">
+                        <!-- ------course1------ -->
+                        <li class="course-item">
+                            <a href="#!"><img src="https://images.unsplash.com/photo-1683009427513-28e163402d16?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Basic web design" class="thumb"></a>
+                            <div class="info">
+                                <div class="head">
+                                    <h3 class="title line-clamp .break-all"><a href="#!">Basic web design</a></h3>
+                                    <div class="rating">
+                                        <img src="./assets/icons/Star.svg" alt="star" class="star">
+                                        <span class="value">4.5</span>
+                                    </div>
+                                </div>
+                                <p class="desc line-clamp line2 .break-all">Get the best course, gain knowledge and shine for your future career.</p>
+                                <div class="foot">
+                                    <span class="price">$120.75</span>
+                                    <button class="btn book-btn">Book Now</button>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- ------course2------ -->
+                        <li class="course-item">
+                            <a href="#!"><img src="./assets/imgs/course2.jpg" alt="UI/UX design" class="thumb"></a>
+                            <div class="info">
+                                <div class="head">
+                                    <h3 class="title line-clamp .break-all"><a href="#!">UI/UX design</a></h3>
+                                    <div class="rating">
+                                        <img src="./assets/icons/Star.svg" alt="star" class="star">
+                                        <span class="value">4.5</span>
+                                    </div>
+                                </div>
+                                <p class="desc line-clamp line2 .break-all">Get the best course, gain knowledge and shine for your future career.</p>
+                                <div class="foot">
+                                    <span class="price">$120.75</span>
+                                    <button class="btn book-btn">Book Now</button>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- ------course3------ -->
+                        <li class="course-item">
+                            <a href="#!"><img src="./assets/imgs/course3.jpg" alt="Web App design" class="thumb"></a>
+                            <div class="info">
+                                <div class="head">
+                                    <h3 class="title line-clamp .break-all"><a href="#!">Web App design</a></h3>
+                                    <div class="rating">
+                                        <img src="./assets/icons/Star.svg" alt="star" class="star">
+                                        <span class="value">4.5</span>
+                                    </div>
+                                </div>
+                                <p class="desc line-clamp line2 .break-all">Get the best course, gain knowledge and shine for your future career.</p>
+                                <div class="foot">
+                                    <span class="price">$120.75</span>
+                                    <button class="btn book-btn">Book Now</button>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </main>
