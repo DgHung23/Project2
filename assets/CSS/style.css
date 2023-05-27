@@ -619,6 +619,7 @@ header {
 }
 
 .blogs .body .lish {
+    overflow-x: auto;
     margin-top: 55px;
     display: flex;
     flex: 1;
@@ -682,6 +683,7 @@ header {
 
 .blogs .info .read-more {
     margin-top: 12px;
+    font-size: 1.4rem;
 }
 
 .blogs .info .read-more:hover {
@@ -798,7 +800,7 @@ header {
     background: #59554b;
 }
 
-.footer .end {
+.footer .copyright {
     padding: 28px 0;
     font-size: 1.4rem;
     line-height: 1.86;
